@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <Extern href="stdidcmd.h" />
+   <Extern href="vsshlids.h" />
+
+   <Commands package="GuidPackage">
+      <Groups>
+         <Group guid="GuidToolbarCmd" id="MenuGroup" priority="0x0600">
+           <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS"/>
+         </Group>
+         <Group guid="GuidToolbarCmd" id="ToolbarGroup" priority="0x0000">
+           <Parent guid="GuidToolbarCmd" id="Toolbar"/>
+         </Group>      
+      </Groups>
+      <Menus>
+         <Menu guid="GuidToolbarCmd" id="Toolbar" type="Toolbar">
+            <CommandFlag>DefaultDocked</CommandFlag>
+            <Strings>
+              <ButtonText>Sushi Tool</ButtonText>
+              <CommandName>Sushi Tool</CommandName>
+            </Strings>
+         </Menu>
+      </Menus>
+      <Buttons>
+         <Button guid="GuidToolbarCmd" id="SushiCommandID" type="Button">
+            <Parent guid="GuidToolbarCmd" id="ToolbarGroup" />
+            <CommandFlag>TextOnly</CommandFlag>
+            <Strings>
+               <ButtonText>Sushi-Plugin</ButtonText>
+            </Strings>
+         </Button>
+      </Buttons>
+   </Commands>
+
+   <Symbols>
+      <GuidSymbol name="GuidPackage" value="{4d39cbb8-8aad-4b40-b867-22082c266766}" />
+      <GuidSymbol name="GuidToolbarCmd" value="{8b033dfa-ab64-4106-9b87-116a5fc2a9d8}">
+         <IDSymbol name="MenuGroup" value="0x1020" />
+         <IDSymbol name="SushiCommandID" value="0x0100" /> 
+         <IDSymbol name="Toolbar" value="0x1000" />
+         <IDSymbol name="ToolbarGroup" value="0x1050" />
+      </GuidSymbol>
+   </Symbols>
+</CommandTable>
