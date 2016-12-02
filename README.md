@@ -14,5 +14,7 @@ Require Visual Studio 2015.
 
 ![DesktopCharacterDemo](Settings_2.png)
 
+* Please Start the Build and then the Sushi turns.
+
 ## License
 This software is licensed under the MIT License.
